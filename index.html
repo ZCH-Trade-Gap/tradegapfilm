@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Trade Gap — Partner with the Film</title>
+<meta name="description" content="The Trade Gap is a feature documentary about America's skilled-trades shortage. We're inviting companies in the trades to be featured in the film.">
+<meta property="og:title" content="The Trade Gap: Be featured in the documentary">
+<meta property="og:description" content="We're inviting companies in the trades to be featured in a feature-length documentary going into production in 2027.">
+<meta property="og:image" content="https://i.ytimg.com/vi/Z20hoNqfrGc/maxresdefault.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://i.ytimg.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400..700;1,400..700&family=Oswald:wght@400..700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#143241;        /* cover teal-navy: dark surfaces, text */
+  --ink-2:#1D3D4D;
+  --ray:#204252;        /* cover rays */
+  --cream-2:#EBDFC9;    /* cover cream: alt sections, tape */
+  --cream:#F5EEE0;      /* main background */
+  --red:#A82820;        /* cover red: actions */
+  --red-hi:#BD3328;
+  --red-bright:#E2604F; /* red accents on dark */
+  --muted:#4E5F66;
+  --line:#D6C9B0;
+  --max:1160px;
+  --gutter:clamp(16px,4vw,40px);
+  --header:64px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header) + 16px)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:"Archivo",system-ui,sans-serif;font-size:clamp(17px,1.1vw,18px);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--red-bright);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.display{font-family:"Oswald","Archivo Narrow",Impact,sans-serif;font-weight:700;line-height:.98;letter-spacing:0;margin:0}
+h2.display{font-size:clamp(40px,6vw,76px)}
+h3{font-size:1.15rem;font-weight:700;margin:0 0 .35em;line-height:1.25}
+p{margin:0 0 1em;max-width:62ch}
+.lede{font-size:clamp(19px,1.5vw,22px);line-height:1.5}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;min-height:52px;padding:0 1.5em;font:inherit;font-weight:700;font-size:1rem;text-decoration:none;border-radius:4px;border:2px solid transparent;cursor:pointer;transition:background .15s,color .15s}
+.btn-primary{background:var(--red);color:var(--cream)}
+.btn-primary:hover{background:var(--red-hi)}
+.btn-ghost{border-color:currentColor;color:inherit;background:transparent}
+.btn-ghost:hover{background:rgba(255,255,255,.08)}
+.btn-row{display:flex;flex-wrap:wrap;gap:12px}
+
+/* Header + tape-measure scroll progress */
+header.site{position:sticky;top:0;z-index:20;background:var(--ink);color:#fff}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:var(--header);gap:16px}
+.brand{font-family:"Oswald",Impact,sans-serif;font-weight:700;text-transform:uppercase;font-size:24px;text-decoration:none;letter-spacing:.01em}
+header nav{display:flex;align-items:center;gap:28px;font-size:.95rem}
+header nav a.link{text-decoration:none;opacity:.8}
+header nav a.link:hover{opacity:1}
+header .btn{min-height:42px;padding:0 1.1em;font-size:.95rem}
+@media (max-width:760px){header nav a.link{display:none}.brand{white-space:nowrap}header .btn{min-height:40px;padding:0 .9em;font-size:.9rem;white-space:nowrap}}
+.progress{position:absolute;left:0;right:0;bottom:-10px;height:10px;pointer-events:none;--p:0}
+.progress-tape{position:absolute;inset:0;background-color:var(--cream-2);
+  background-image:linear-gradient(90deg,var(--ink) 1px,transparent 1px),linear-gradient(90deg,var(--ink) 1px,transparent 1px);
+  background-size:40px 7px,8px 3px;background-repeat:repeat-x;
+  clip-path:inset(0 calc(100% - var(--p) * 100%) 0 0);box-shadow:0 2px 0 rgba(0,0,0,.18)}
+.progress-hook{position:absolute;top:-2px;left:calc(var(--p) * 100%);width:6px;height:14px;margin-left:-6px;background:var(--red);border-radius:1px}
+
+/* Hero with trailer */
+.hero{position:relative;background:var(--ink);color:#fff;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:repeating-conic-gradient(from 0deg at 78% 115%,var(--ray) 0deg 3.5deg,var(--ink) 3.5deg 7deg)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,50,65,0) 40%,var(--ink) 100%)}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(32px,4.5vw,72px);align-items:center;padding-top:clamp(44px,5vw,80px);padding-bottom:clamp(56px,7vw,96px)}
+.hero .kicker{font-size:1rem;font-weight:600;color:var(--cream-2);margin:0 0 18px}
+.hero h1{font-size:clamp(50px,5.6vw,82px);color:var(--cream-2);text-transform:uppercase;letter-spacing:.01em;text-shadow:.045em .045em 0 var(--red)}
+.hero .lede{margin:22px 0 28px;color:#E4DCCB;max-width:46ch}
+.endorse{margin:28px 0 0;padding-left:18px;border-left:3px solid var(--red-bright)}
+.endorse blockquote{margin:0 0 8px;font-size:clamp(19px,1.6vw,23px);line-height:1.3;font-family:"Oswald",Impact,sans-serif;font-weight:400;color:var(--cream)}
+.endorse figcaption{font-size:.95rem;color:#B9C6CB}
+.endorse figcaption strong{color:var(--cream-2)}
+
+.video{position:relative;aspect-ratio:16/9;background:#0B1E27;border-radius:4px;overflow:hidden;box-shadow:0 0 0 1px rgba(255,255,255,.12),0 30px 60px -24px rgba(0,0,0,.6)}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.play{position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;background:none;cursor:pointer;color:var(--cream)}
+.play img{width:100%;height:100%;object-fit:cover}
+.play::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,50,65,.05) 40%,rgba(20,50,65,.75) 100%)}
+.play-icon{position:absolute;z-index:1;left:50%;top:50%;width:84px;height:84px;margin:-42px 0 0 -42px;border-radius:50%;background:var(--red);box-shadow:0 0 0 6px rgba(245,238,224,.18);transition:transform .2s,background .2s}
+.play-icon svg{position:absolute;left:33px;top:27px}
+.play:hover .play-icon{transform:scale(1.06);background:var(--red-hi)}
+.play:focus-visible{outline:3px solid var(--red-bright);outline-offset:-3px}
+.play-label{position:absolute;z-index:1;left:18px;bottom:14px;font-weight:700;font-size:1rem;text-align:left}
+@media (prefers-reduced-motion:reduce){.play-icon{transition:none}}
+
+@media (max-width:900px){
+  .hero-grid{display:flex;flex-direction:column;align-items:stretch;gap:0;padding-top:44px}
+  .hero-copy,.hero-media{display:contents}
+  .hero .kicker{order:1}
+  .hero h1{order:2;font-size:clamp(44px,12vw,80px)}
+  .hero .btn-row{order:3;margin-top:24px}
+  .video{order:4;margin-top:28px}
+  .hero .lede{order:5;margin:28px 0 0}
+  .endorse{order:6}
+}
+
+/* Sections */
+section.block{padding:clamp(72px,10vw,128px) 0}
+.on-cream-2{background:var(--cream-2)}
+.section-head{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,64px);align-items:end;margin-bottom:clamp(40px,6vw,72px)}
+.section-head p{margin:0;color:var(--muted)}
+@media (max-width:860px){.section-head{grid-template-columns:1fr}}
+
+/* What partners get */
+.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:2px solid var(--ink)}
+.benefit{padding:28px 28px 32px 0}
+.benefit + .benefit{padding-left:28px;border-left:1px solid var(--line)}
+.benefit p{color:var(--muted);margin:0}
+@media (max-width:860px){
+  .benefits{grid-template-columns:1fr}
+  .benefit,.benefit + .benefit{padding:24px 0;border-left:0;border-bottom:1px solid var(--line)}
+}
+
+/* Hammer-and-nails divider */
+.nail-band{position:relative;height:230px;overflow:hidden;background:var(--cream)}
+.nail-track{position:relative;height:100%}
+.board{position:absolute;z-index:2;left:0;right:0;top:182px;bottom:0;background-color:#C8AD84;
+  background-image:linear-gradient(180deg,rgba(255,255,255,.28) 0 2px,transparent 2px),repeating-linear-gradient(180deg,rgba(92,62,32,.13) 0 1px,transparent 1px 7px);
+  box-shadow:inset 0 -6px 0 rgba(92,62,32,.12)}
+.nail{position:absolute;z-index:1;top:138px;left:var(--x);width:24px;margin-left:-12px;will-change:transform}
+.nail .head{display:block;height:7px;background:#4D5D65;border-radius:2px}
+.nail .shaft{display:block;width:5px;height:54px;margin:0 auto;background:linear-gradient(90deg,#7D8A90,#B9C3C7 50%,#7D8A90);clip-path:polygon(0 0,100% 0,100% 90%,50% 100%,0 90%)}
+.n1{--x:18%}.n2{--x:38%}.n3{--x:58%}.n4{--x:78%}
+.hammer{position:absolute;z-index:3;left:0;top:0;width:200px;height:60px;will-change:transform}
+@media (max-width:600px){.n1{--x:10%}.n2{--x:30%}.n3{--x:50%}.n4{--x:70%}.hammer{width:124px;height:37.2px}}
+
+/* Who we're looking for */
+.seeking{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(32px,5vw,80px);align-items:start}
+.trades{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.trades li{background:var(--cream);border:1px solid var(--line);padding:10px 16px;border-radius:999px;font-weight:600;font-size:.98rem}
+@media (max-width:860px){.seeking{grid-template-columns:1fr}}
+
+/* Tape measure timeline */
+.tape-section{background:var(--ink);color:#fff;overflow:hidden}
+.tape-section .section-head p{color:#AEB8C0}
+.tape{position:relative;margin-top:8px}
+.tape-bar{height:64px;background-color:var(--cream-2);
+   background-image:linear-gradient(90deg,var(--ink) 2px,transparent 2px),linear-gradient(90deg,var(--ink) 1px,transparent 1px);
+   background-size:40px 26px,10px 14px;background-repeat:repeat-x,repeat-x;border-radius:3px 0 0 3px;transform-origin:left center;transform:scaleX(var(--extend,1));transition:transform 1.4s cubic-bezier(.2,.7,.1,1)}
+.js .tape:not(.in) .tape-bar{--extend:.04}
+.tape-marks{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.mark{position:relative;padding-top:28px}
+.mark::before{content:"";position:absolute;top:0;left:0;width:2px;height:20px;background:var(--cream-2)}
+.mark .yr{font-family:"Oswald",Impact,sans-serif;font-weight:700;font-size:clamp(40px,5vw,64px);line-height:1;display:block;margin-bottom:10px}
+.mark h3{color:#fff}
+.mark p{color:#AEB8C0;font-size:.98rem;margin:0}
+.mark.now .yr{color:var(--red-bright)}
+.mark .tag{display:inline-block;background:var(--red);color:var(--cream);font-weight:700;font-size:.82rem;padding:3px 9px;border-radius:3px;margin-bottom:10px}
+@media (max-width:760px){
+  .tape{display:grid;grid-template-columns:28px 1fr;gap:20px}
+  .tape-bar{height:auto;width:28px;transform-origin:top center;transform:scaleY(var(--extend,1));
+    background-image:linear-gradient(180deg,var(--ink) 2px,transparent 2px),linear-gradient(180deg,var(--ink) 1px,transparent 1px);
+    background-size:14px 40px,8px 10px;background-repeat:repeat-y,repeat-y;border-radius:3px 3px 0 0}
+  .tape-marks{grid-template-columns:1fr;gap:36px}
+  .mark{padding-top:0}
+  .mark::before{display:none}
+}
+
+/* Story */
+.story{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,6vw,96px);align-items:start}
+.story figure{margin:0;max-width:340px;position:sticky;top:calc(var(--header) + 32px)}
+.story figure img{width:100%;height:auto;border-radius:4px;box-shadow:0 20px 50px -20px rgba(20,50,65,.45)}
+.story figcaption{margin-top:14px;font-size:.95rem;color:var(--muted)}
+.story blockquote{margin:0 0 28px;font-size:clamp(26px,3vw,36px);line-height:1.2;font-family:"Oswald",Impact,sans-serif;font-weight:600;max-width:24ch}
+.story .sig{font-weight:700;margin-top:24px}
+.story .sig span{display:block;font-weight:400;color:var(--muted)}
+.inline-link{font-weight:700;text-decoration-color:var(--red);text-decoration-thickness:3px;text-underline-offset:4px}
+@media (max-width:860px){.story{grid-template-columns:1fr}.story figure{position:static;max-width:380px}}
+
+/* Team */
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:2px solid var(--ink)}
+.member{padding:24px 24px 28px 0;border-bottom:1px solid var(--line)}
+.member:not(:nth-child(3n+1)){padding-left:24px;border-left:1px solid var(--line)}
+.member .role{color:var(--muted);font-size:.95rem;margin:0}
+.member a{text-decoration:none}
+.member a:hover h3{text-decoration:underline;text-decoration-color:var(--red);text-decoration-thickness:3px}
+@media (max-width:860px){.team{grid-template-columns:1fr 1fr}.member:not(:nth-child(3n+1)){padding-left:0;border-left:0}.member:nth-child(even){padding-left:20px;border-left:1px solid var(--line)}}
+@media (max-width:520px){.team{grid-template-columns:1fr}.member:nth-child(even){padding-left:0;border-left:0}}
+
+/* Final CTA with spirit level */
+.cta{background:var(--red);color:var(--cream);padding:clamp(72px,10vw,128px) 0}
+.cta h2{font-size:clamp(48px,8vw,104px);max-width:12ch;margin-bottom:28px}
+.cta .lede{margin-bottom:36px}
+.cta .btn-dark{background:var(--ink);color:var(--cream)}
+.cta .btn-dark:hover{background:var(--ink-2)}
+.cta .btn-ghost{border-color:var(--cream)}
+.cta .btn-ghost:hover{background:rgba(245,238,224,.1)}
+.contact-lines{margin-top:40px;display:flex;flex-wrap:wrap;gap:12px 40px;font-size:1.05rem}
+.contact-lines a{font-weight:700;text-decoration:none;border-bottom:2px solid var(--cream)}
+.contact-lines span{display:block;font-size:.9rem;color:#F2CFC4}
+.level{position:relative;width:min(440px,100%);height:46px;margin-bottom:44px;background:var(--ink);border-radius:6px;display:flex;align-items:center;justify-content:center;
+  transform:rotate(var(--tilt,0deg));transform-origin:30% 50%;box-shadow:inset 0 -4px 0 rgba(0,0,0,.25),0 10px 24px -12px rgba(0,0,0,.5);will-change:transform}
+.level::before,.level::after{content:"";position:absolute;top:50%;width:8px;height:8px;margin-top:-4px;border-radius:50%;background:#0B1E27;box-shadow:inset 0 1px 0 rgba(255,255,255,.15)}
+.level::before{left:18px}.level::after{right:18px}
+.vial{position:relative;width:160px;height:22px;border-radius:11px;background:linear-gradient(#F3EBB9,#DCCF8A);box-shadow:inset 0 2px 3px rgba(0,0,0,.28);overflow:hidden}
+.vial::before,.vial::after{content:"";position:absolute;top:0;bottom:0;width:2px;background:var(--ink);transition:background .3s}
+.vial::before{left:calc(50% - 22px)}.vial::after{left:calc(50% + 20px)}
+.level.on .vial::before,.level.on .vial::after{background:var(--red)}
+.bubble{position:absolute;top:4px;left:50%;width:34px;height:14px;margin-left:-17px;border-radius:50%;background:radial-gradient(ellipse at 40% 35%,#fff 0 30%,#FFFBEA 60%,rgba(255,255,255,.55));transform:translateX(var(--bx,0px));will-change:transform}
+
+/* Footer */
+footer{background:var(--ink);color:#AEB8C0;padding:48px 0 calc(48px + env(safe-area-inset-bottom));font-size:.95rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:center}
+footer .brand{color:#fff}
+footer ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:20px}
+footer a{text-decoration:none}
+footer a:hover{color:#fff}
+
+/* Mobile sticky CTA */
+.mobile-cta{display:none}
+@media (max-width:760px){
+  .mobile-cta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:var(--ink);box-shadow:0 -8px 24px rgba(0,0,0,.25);transform:translateY(110%);transition:transform .25s}
+  .mobile-cta.show{transform:none}
+  .mobile-cta .btn{flex:1}
+  footer{padding-bottom:calc(96px + env(safe-area-inset-bottom))}
+}
+@media (prefers-reduced-motion:reduce){.tape-bar,.mobile-cta{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#top">The Trade Gap</a>
+    <nav aria-label="Main">
+      <a class="link" href="#trailer" data-play>Trailer</a>
+      <a class="link" href="#partner">Partnership</a>
+      <a class="link" href="#story">The story</a>
+      <a class="link" href="#team">Team</a>
+      <a class="btn btn-primary" href="#contact">Become a partner</a>
+    </nav>
+  </div>
+  <div class="progress" id="progress" aria-hidden="true"><div class="progress-tape"></div><i class="progress-hook"></i></div>
+</header>
+
+<main id="top">
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="kicker">A feature documentary, filming in 2027</p>
+      <h1 id="hero-title" class="display">Our economy has a gap. Help us film it.</h1>
+      <p class="lede">The trades are losing workers faster than we can replace them. <em>The Trade Gap</em> tells that story on screen, and we're inviting companies in the trades to be featured in it.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="#contact">Become a featured partner</a>
+        <a class="btn btn-ghost" href="#trailer" data-play>Watch the trailer</a>
+      </div>
+    </div>
+    <div class="hero-media">
+      <div class="video" id="trailer">
+        <button class="play" type="button" aria-label="Play The Trade Gap trailer">
+          <img src="https://i.ytimg.com/vi/Z20hoNqfrGc/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/Z20hoNqfrGc/hqdefault.jpg'" alt="" width="1280" height="720" fetchpriority="high">
+          <span class="play-icon"><svg width="24" height="30" viewBox="0 0 24 30" aria-hidden="true"><path d="M0 0 24 15 0 30z" fill="#F5EEE0"/></svg></span>
+          <span class="play-label">Watch the trailer</span>
+        </button>
+        <noscript><iframe src="https://www.youtube-nocookie.com/embed/Z20hoNqfrGc?rel=0" title="The Trade Gap trailer" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></noscript>
+      </div>
+      <figure class="endorse">
+        <blockquote>“Your gritty, practical guide to reclaiming purpose through real, hands-on skills.”</blockquote>
+        <figcaption><strong>Michael Easter</strong>, <em>New York Times</em> bestselling author of <em>The Comfort Crisis</em>, on the book by Zachary Craig Hanson</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="partner" aria-labelledby="partner-title">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="partner-title" class="display">What featured partners get</h2>
+      <p class="lede">Partners fund the production and, in return, become part of the story. Every partnership is shaped around your company, your people and what you want the film to show.</p>
+    </div>
+    <div class="benefits">
+      <div class="benefit">
+        <h3>Your crews on screen</h3>
+        <p>We film on your job sites and in your shops, and tell the stories of your craftspeople, apprentices and leaders in their own words.</p>
+      </div>
+      <div class="benefit">
+        <h3>An audience you're trying to reach</h3>
+        <p>Students, parents, educators and workers ready to retrain: the people who will watch a film long before they read a report about workforce shortages.</p>
+      </div>
+      <div class="benefit">
+        <h3>A story you can keep using</h3>
+        <p>Recognition as a partner in the film, plus footage and moments you can put to work in recruiting, training and community outreach.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="nail-band" aria-hidden="true">
+  <div class="wrap nail-track" id="nails">
+    <span class="nail n1"><i class="head"></i><i class="shaft"></i></span>
+    <span class="nail n2"><i class="head"></i><i class="shaft"></i></span>
+    <span class="nail n3"><i class="head"></i><i class="shaft"></i></span>
+    <span class="nail n4"><i class="head"></i><i class="shaft"></i></span>
+    <svg class="hammer" viewBox="0 0 200 60">
+      <rect x="40" y="20" width="158" height="12" rx="5" fill="#A82820"/>
+      <rect x="146" y="18" width="52" height="16" rx="6" fill="#143241"/>
+      <path d="M150 18v16M160 18v16M170 18v16M180 18v16" stroke="#2A4A5A" stroke-width="2"/>
+      <path d="M14 6q-8-1-14-6l3 10q5 3 11 4z" fill="#3A5361"/>
+      <rect x="14" y="4" width="26" height="38" rx="2" fill="#3A5361"/>
+      <rect x="18" y="8" width="18" height="3" fill="#FFFFFF" opacity=".2"/>
+      <rect x="8" y="40" width="38" height="12" rx="2" fill="#143241"/>
+    </svg>
+  </div>
+  <div class="board"></div>
+</div>
+
+<section class="block on-cream-2" aria-labelledby="seeking-title">
+  <div class="wrap seeking">
+    <div>
+      <h2 id="seeking-title" class="display">Who we're looking for</h2>
+      <p class="lede" style="margin-top:24px">Companies and organizations that build, maintain and power the country, and want to show young people what a career in the trades can look like.</p>
+      <a class="btn btn-primary" href="#contact" style="margin-top:12px">Start the conversation</a>
+    </div>
+    <ul class="trades" aria-label="Partner types">
+      <li>General and specialty contractors</li>
+      <li>Electrical</li>
+      <li>Plumbing and HVAC</li>
+      <li>Welding and fabrication</li>
+      <li>Critical environments and data centers</li>
+      <li>Infrastructure and utilities</li>
+      <li>Manufacturing</li>
+      <li>Unions and apprenticeship programs</li>
+      <li>Trade schools and workforce programs</li>
+      <li>Equipment and tool makers</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block tape-section" aria-labelledby="timeline-title">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="timeline-title" class="display">Where the film stands</h2>
+      <p class="lede">The book laid the foundation. The film builds on it. Partners who join now are part of the production from the start.</p>
+    </div>
+    <div class="tape" id="tape">
+      <div class="tape-bar" aria-hidden="true"></div>
+      <div class="tape-marks">
+        <div class="mark">
+          <span class="yr">2025</span>
+          <h3>The book</h3>
+          <p><em>The Trade Gap</em> is published and becomes a bestseller.</p>
+        </div>
+        <div class="mark">
+          <span class="yr">2026</span>
+          <h3>The pilot</h3>
+          <p>The trailer is filmed with Fascination Film Studio.</p>
+        </div>
+        <div class="mark now">
+          <span class="tag">Partners joining now</span>
+          <span class="yr">Today</span>
+          <h3>Pre-production</h3>
+          <p>We're selecting the companies, people and job sites the film will feature.</p>
+        </div>
+        <div class="mark">
+          <span class="yr">2027</span>
+          <h3>Production</h3>
+          <p>Filming of the full-length documentary begins.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="story" aria-labelledby="story-title">
+  <div class="wrap story">
+    <figure>
+      <img src="images/the-trade-gap-cover.jpg" alt="Cover of The Trade Gap by Zachary Craig Hanson: a tradesman holding a wrench over his shoulder" width="825" height="1275" loading="lazy">
+      <figcaption>The book behind the film. <a class="inline-link" href="https://a.co/d/07k2iDF2" target="_blank" rel="noopener">Buy The Trade Gap</a></figcaption>
+    </figure>
+    <div>
+      <h2 id="story-title" class="display" style="margin-bottom:32px">Why this film, why now</h2>
+      <blockquote>“Go to college, get a good job, and you’ll have an easy life.” What if that was the wrong goal?</blockquote>
+      <p>I got my job in the information economy, then watched as hundreds, then thousands, and now tens of thousands of people were laid off.</p>
+      <p>Meanwhile, people are retiring out of the trades faster than we’re replacing them. There’s a boom in demand we can’t meet, because there aren’t enough skilled workers.</p>
+      <p>A nation of too many thinkers and not enough doers leaves all of us vulnerable: to layoffs, to crowded job markets, and to breakdowns in our homes and our infrastructure. The people who understand that gap are the ones who will build successful lives as the economy shifts.</p>
+      <p>That’s why I wrote <em>The Trade Gap</em>. Books are great, but we live on our screens. To reach students, parents and a workforce ready to retrain, we need to tell this story as a film, and we need partners in the trades to help tell it.</p>
+      <p class="sig">Zachary Hanson<span>Author, <em>The Trade Gap</em></span></p>
+    </div>
+  </div>
+</section>
+
+<section class="block on-cream-2" id="team" aria-labelledby="team-title">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="team-title" class="display">The people making it</h2>
+      <p class="lede">An authentic film needs people who know the work. Our team pairs documentary filmmakers with advisors from the trades and critical environments.</p>
+    </div>
+    <div class="team">
+      <div class="member">
+        <a href="https://www.fascinationfilms.com/" target="_blank" rel="noopener"><h3>Fascination Film Studio</h3></a>
+        <p class="role">Production studio</p>
+      </div>
+      <div class="member">
+        <a href="https://zacharyhanson.me" target="_blank" rel="noopener"><h3>Zachary Hanson</h3></a>
+        <p class="role">Author of <em>The Trade Gap</em></p>
+      </div>
+      <div class="member">
+        <h3>BUILD My Future</h3>
+        <p class="role">Partner</p>
+      </div>
+      <div class="member">
+        <h3>Scott Shotts</h3>
+        <p class="role">Co-producer and trade industry advisor</p>
+      </div>
+      <div class="member">
+        <h3>Jay Kallsen</h3>
+        <p class="role">Co-producer and critical environments advisor</p>
+      </div>
+      <div class="member">
+        <h3>Acorns &amp; Oaks Publishing</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <div class="level" id="level" aria-hidden="true"><div class="vial"><i class="bubble"></i></div></div>
+    <h2 id="contact-title" class="display">Put your company in the film.</h2>
+    <p class="lede">Tell us a little about your company and the work you do. We’ll follow up to talk through what a partnership could look like.</p>
+    <div class="btn-row">
+      <a class="btn btn-dark" href="mailto:info@fascinationfilms.com?subject=Featured%20partner%20inquiry%3A%20The%20Trade%20Gap&amp;body=Company%3A%0AYour%20name%20and%20role%3A%0ATrade%20%2F%20industry%3A%0AWhere%20you%20work%3A%0AWhat%20you'd%20like%20the%20film%20to%20show%3A%0A">Email us about partnering</a>
+      <a class="btn btn-ghost" href="tel:+12539060420">Call (253) 906-0420</a>
+    </div>
+    <div class="contact-lines">
+      <div><span>Partnerships, media and speaking</span><a href="mailto:info@fascinationfilms.com">info@fascinationfilms.com</a></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="brand" href="#top">The Trade Gap</a>
+      <div style="margin-top:6px">© 2026 <a href="https://www.fascinationfilms.com/" target="_blank" rel="noopener">Fascination Film Studio</a> | Acorns &amp; Oaks Publishing</div>
+    </div>
+    <ul aria-label="Social">
+      <li><a href="https://www.facebook.com/TradeGapFilm" target="_blank" rel="noopener">Facebook</a></li>
+      <li><a href="https://www.instagram.com/thetradegap" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://www.youtube.com/watch?v=Z20hoNqfrGc" target="_blank" rel="noopener">YouTube</a></li>
+      <li><a href="https://www.linkedin.com/in/teegstouffer/" target="_blank" rel="noopener">LinkedIn</a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="mobile-cta" id="mobileCta">
+  <a class="btn btn-primary" href="#contact">Become a featured partner</a>
+</div>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function clamp(v){ return v < 0 ? 0 : v > 1 ? 1 : v; }
+
+  /* Trailer: load YouTube only when someone presses play */
+  var vid = document.getElementById('trailer');
+  function play(){
+    if (vid.querySelector('iframe')) return;
+    var f = document.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/Z20hoNqfrGc?autoplay=1&rel=0&playsinline=1';
+    f.title = 'The Trade Gap trailer';
+    f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    f.referrerPolicy = 'strict-origin-when-cross-origin';
+    f.allowFullscreen = true;
+    vid.innerHTML = '';
+    vid.appendChild(f);
+    f.focus();
+  }
+  vid.querySelector('.play').addEventListener('click', play);
+  [].forEach.call(document.querySelectorAll('[data-play]'), function(a){
+    a.addEventListener('click', function(e){
+      e.preventDefault();
+      var r = vid.getBoundingClientRect();
+      if (r.top < 80 || r.bottom > window.innerHeight) vid.scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block: 'center'});
+      play();
+    });
+  });
+
+  /* Scroll pieces */
+  var prog = document.getElementById('progress');
+  var track = document.getElementById('nails');
+  var nails = [].slice.call(track.querySelectorAll('.nail'));
+  var hammer = track.querySelector('.hammer');
+  var level = document.getElementById('level');
+  var vial = level.querySelector('.vial');
+  var contact = document.getElementById('contact');
+  var HEAD_TOP = 138, DRIVE = 37, xs = [], s = 1, bubbleMax = 50;
+
+  function measure(){
+    xs = nails.map(function(n){ return n.offsetLeft + n.offsetWidth / 2; });
+    s = hammer.getBoundingClientRect().width / 200 || 1;
+    bubbleMax = vial.offsetWidth / 2 - 21;
+  }
+
+  function drawNails(p){
+    var N = nails.length, t = p * N;
+    var k = Math.min(Math.floor(t), N - 1), f = Math.min(t - k, 1);
+    var u = Math.min(f / 0.7, 1);
+    var hits = Math.min(1, Math.floor(u * 3 + 0.5) / 3);   /* three strikes per nail */
+    nails.forEach(function(n, i){
+      var d = i < k ? 1 : i > k ? 0 : hits;
+      n.style.transform = 'translateY(' + (DRIVE * d) + 'px)';
+    });
+    var x, ang, dk;
+    if (f < 0.7) {                       /* swinging at nail k */
+      x = xs[k]; dk = hits;
+      ang = 30 * (0.5 + 0.5 * Math.cos(2 * Math.PI * 3 * u));
+    } else if (k < N - 1) {              /* moving to the next nail */
+      var m = (f - 0.7) / 0.3;
+      x = xs[k] + (xs[k + 1] - xs[k]) * m; dk = 1 - m; ang = 30;
+    } else {                             /* done: rest on the last nail */
+      x = xs[k]; dk = 1; ang = 30 * (1 - (f - 0.7) / 0.3);
+    }
+    var left = x - 27 * s, top = HEAD_TOP + DRIVE * dk - 52 * s;
+    hammer.style.transformOrigin = (194 * s) + 'px ' + (26 * s) + 'px';
+    hammer.style.transform = 'translate(' + left + 'px,' + top + 'px) rotate(' + ang + 'deg)';
+  }
+
+  var ticking = false;
+  function frame(){
+    ticking = false;
+    var vh = window.innerHeight, de = document.documentElement;
+    prog.style.setProperty('--p', clamp(window.scrollY / Math.max(1, de.scrollHeight - vh)).toFixed(4));
+
+    var r = track.getBoundingClientRect();
+    if (r.bottom > -40 && r.top < vh + 40) drawNails(reduce ? 1 : clamp((vh - r.top) / (vh * 0.7)));
+
+    var c = contact.getBoundingClientRect();
+    if (c.top < vh + 40 && c.bottom > 0) {
+      var q = reduce ? 1 : clamp((vh - c.top) / (vh * 0.6));
+      var e = 1 - Math.pow(1 - q, 3);
+      level.style.setProperty('--tilt', (-7 * (1 - e)).toFixed(2) + 'deg');
+      level.style.setProperty('--bx', ((1 - e) * bubbleMax).toFixed(1) + 'px');
+      level.classList.toggle('on', q >= 1);
+    }
+  }
+  function onScroll(){ if (!ticking) { ticking = true; requestAnimationFrame(frame); } }
+  window.addEventListener('scroll', onScroll, {passive: true});
+  window.addEventListener('resize', function(){ measure(); onScroll(); });
+  window.addEventListener('load', function(){ measure(); frame(); });
+  measure(); frame();
+
+  /* Timeline tape + mobile sticky button */
+  var tape = document.getElementById('tape');
+  var cta = document.getElementById('mobileCta');
+  var hero = document.querySelector('.hero');
+  if (!('IntersectionObserver' in window)) { tape.classList.add('in'); return; }
+  new IntersectionObserver(function(e, o){ if (e[0].isIntersecting) { tape.classList.add('in'); o.disconnect(); } }, {threshold: .35}).observe(tape);
+  var heroVisible = true, contactVisible = false;
+  function upd(){ cta.classList.toggle('show', !heroVisible && !contactVisible); }
+  new IntersectionObserver(function(e){ heroVisible = e[0].isIntersecting; upd(); }).observe(hero);
+  new IntersectionObserver(function(e){ contactVisible = e[0].isIntersecting; upd(); }).observe(contact);
+})();
+</script>
+</body>
+</html>
